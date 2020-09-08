@@ -1,0 +1,84 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testcase.TestCaseFactory as TestCaseFactory
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
+import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WSBuiltInKeywords
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
+import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+
+import com.thoughtworks.selenium.Selenium
+import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.WebDriver
+import com.thoughtworks.selenium.webdriven.WebDriverBackedSelenium
+import static org.junit.Assert.*
+import java.util.regex.Pattern
+import static org.apache.commons.lang3.StringUtils.join
+
+WebUI.openBrowser('https://www.google.com/')
+def driver = DriverFactory.getWebDriver()
+String baseUrl = "https://www.google.com/"
+selenium = new WebDriverBackedSelenium(driver, baseUrl)
+selenium.open("https://wx1.getthere.net/setup/adminLoadSetupSiteprefLocalization.admin?sid=891&siteID=7626289")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Comoros")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Cuba")
+selenium.click("xpath=(//option[@value='KM'])[2]")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Comoros")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Gabon")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Gabon")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Gambia")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Gambia")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Georgia")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Georgia")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Germany")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Germany")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Ghana")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Ghana")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Gibraltar")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Gibraltar")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Greece")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Greece")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Greenland")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Greenland")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Grenada")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Grenada")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Guadeloupe")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Guadeloupe")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Guam")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Guam")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Guatemala")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Guatemala")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Guernsey")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Guernsey")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Guinea")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Guinea")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Guinea-Bissau")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Guinea-Bissau")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Guyana")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Gabon")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Guyana")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Gabon")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Gambia")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Afghanistan")
+selenium.removeSelection("id=selectCountriesRestrictions", "label=Gambia")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Burkina Faso")
+selenium.click("xpath=(//option[@value='BF'])[2]")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Burundi")
+selenium.click("xpath=(//option[@value='BI'])[2]")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Canada")
+selenium.click("xpath=(//option[@value='CA'])[2]")
+selenium.addSelection("id=selectCountriesRestrictions", "label=Cape Verde")
+selenium.click("xpath=(//option[@value='CV'])[2]")
